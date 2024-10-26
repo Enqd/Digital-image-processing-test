@@ -19,7 +19,7 @@ plt.imshow(img, cmap="gray")
 img_Sobelx=cv.Sobel(img, cv.CV_64F, 1, 0, ksize=3)
 img_Sobelx = np.uint8(np.absolute(img_Sobelx))
 plt.subplot(132)
-plt.title("2.Roberts锐化后")
+plt.title("2.Sobel锐化后")
 plt.axis('off')
 plt.imshow(img_Sobelx, cmap="gray")
 
