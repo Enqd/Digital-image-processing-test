@@ -3,9 +3,9 @@ import filter
 import matplotlib.pyplot as plt
 import numpy as np
 
-img_g = cv.imread("../result/J/gaussian_noise.png", cv.IMREAD_GRAYSCALE)
-img_u = cv.imread("../result/J/uniform_noise.jpg")
-img_s = cv.imread("../result/J/salt_pepper_noise.jpg")
+img_g = cv.imread("../result/J/gaussian_noise.jpg", 0)
+img_u = cv.imread("../result/J/uniform_noise.jpg", 0)
+img_s = cv.imread("../result/J/salt_pepper_noise.jpg", 0)
 
 _, axe = plt.subplots(1, 2)
 

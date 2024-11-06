@@ -49,16 +49,16 @@ salt_pepper_noise_img = add_salt_pepper_noise(img)
 
 # 显示图片
 plt.figure("uniform_noise")
-plt.imshow(uniform_noise_img, "gray"), plt.title('uniform_noise')
-plt.savefig('../result/J/uniform_noise.jpg')
+plt.imshow(uniform_noise_img, "gray"), plt.axis('off')
+plt.savefig('../result/J/uniform_noise.jpg', bbox_inches='tight', pad_inches=0)
 
 plt.figure("gaussian_noise")
-plt.imshow(gaussian_noise_img, "gray"), plt.title('gaussian_noise')
-plt.savefig('../result/J/gaussian_noise.jpg')
+plt.imshow(gaussian_noise_img, "gray"), plt.axis('off')
+plt.savefig('../result/J/gaussian_noise.jpg', bbox_inches='tight', pad_inches=0)
 
 plt.figure("salt_pepper_noise")
-plt.imshow(salt_pepper_noise_img, "gray"), plt.title('salt_pepper_noise')
-plt.savefig('../result/J/salt_pepper_noise.jpg')
+plt.imshow(salt_pepper_noise_img, "gray"), plt.axis('off')
+plt.savefig('../result/J/salt_pepper_noise.jpg', bbox_inches='tight', pad_inches=0)
 
 plt.show()
 
