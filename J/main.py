@@ -48,37 +48,19 @@ gaussian_noise_img = add_gaussian_noise(img)
 salt_pepper_noise_img = add_salt_pepper_noise(img)
 
 # 显示图片
-# plt.figure("uniform_noise")
-# plt.subplot(121), plt.imshow(img, "gray"), plt.title('origin')
-# plt.subplot(122), plt.imshow(uniform_noise_img, "gray"), plt.title('uniform_noise')
-# plt.savefig('../result/J/uniform_noise.jpg')
+plt.figure("uniform_noise")
+plt.imshow(uniform_noise_img, "gray"), plt.title('uniform_noise')
+plt.savefig('../result/J/uniform_noise.jpg')
 
-# plt.figure("gaussian_noise")
-# plt.subplot(121), plt.imshow(img, "gray"), plt.title('origin')
-# plt.subplot(122), plt.imshow(gaussian_noise_img, "gray"), plt.title('gaussian_noise')
-# plt.savefig('../result/J/gaussian_noise.jpg')
+plt.figure("gaussian_noise")
+plt.imshow(gaussian_noise_img, "gray"), plt.title('gaussian_noise')
+plt.savefig('../result/J/gaussian_noise.jpg')
 
-# plt.figure("salt_pepper_noise")
-# plt.subplot(121), plt.imshow(img, "gray"), plt.title('origin')
-# plt.subplot(122), plt.imshow(salt_pepper_noise_img, "gray"), plt.title('salt_pepper_noise')
-# plt.savefig('../result/J/salt_pepper_noise.jpg')
+plt.figure("salt_pepper_noise")
+plt.imshow(salt_pepper_noise_img, "gray"), plt.title('salt_pepper_noise')
+plt.savefig('../result/J/salt_pepper_noise.jpg')
 
-# plt.show()
-
-# 绘制直方图
-# origin_hist = cv.calcHist([img], [0], None, [256], [0, 256])
-# uniform_noise_hist = cv.calcHist([uniform_noise_img], [0], None, [256], [0, 256])
-# gaussian_noise_hist = cv.calcHist([gaussian_noise_img], [0], None, [256], [0, 256])
-# salt_pepper_noise_hist = cv.calcHist([salt_pepper_noise_img], [0], None, [256], [0, 256])
-
-# plt.plot(origin_hist)
-# plt.show()
-# plt.plot(uniform_noise_hist)
-# plt.show()
-# plt.plot(gaussian_noise_hist)
-# plt.show()
-# plt.plot(salt_pepper_noise_hist)
-# plt.show()
+plt.show()
 
 
 _, axe = plt.subplots(2, 4, figsize = (15, 8)) # _表示忽略返回值
