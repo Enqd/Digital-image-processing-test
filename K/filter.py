@@ -45,15 +45,3 @@ def maximum_filter(img:np.ndarray, m:int, n:int):
                         g = img_t[i + l, j + k]
             img_r[i, j] = g
     return img_r
-
-def butterworth_filter(img:np.ndarray, D0:int, uvk:np.ndarray, n:int):
-    H = np.empty_like(img, float)
-    m, n = img.shape[0] // 2, img.shape[1] // 2
-    for y in range(img.shape[0]):
-        for x in range(img.shape[1]):
-            H[y, x] = 1
-            for uk, vk in uvk:
-                D = np.sqrt(np.power(x - n - uk, 2) + np.power(y - m - vk))
-                Di = np.sqrt(np.power(x - n + uk, 2) + np.power(y - m + vk))
-                H[y, x] *= (1 / (1 + np.power(D0 / (D + 1e-6)), n)) * (1 / (1 + np.power(D0 / (Di + 1e-6), n)))
-    return H
