@@ -21,6 +21,7 @@ img_Prewitt_1 = np.uint8(cv.normalize(abs(img_Prewitt_x) + abs(im_Prewitt_y), No
 thresh_value = 100  # 设置固定阈值，选择适当的阈值进行调试
 _, img_thresholded_1 = cv.threshold(img_Prewitt_1, thresh_value, 255, cv.THRESH_BINARY)
 
+plt.title('Prewitt_xy')
 plt.imshow(img_thresholded_1, cmap='gray')
 plt.axis('off')
 plt.savefig("../result/M/Prewitt_xy.jpg", bbox_inches='tight', pad_inches=0)
@@ -46,6 +47,7 @@ img_Prewitt_2 = np.uint8(cv.normalize(abs(img_Prewitt_45) + abs(im_Prewitt_135),
 thresh_value = 100  # 设置固定阈值，选择适当的阈值进行调试
 _, img_thresholded_2 = cv.threshold(img_Prewitt_2, thresh_value, 255, cv.THRESH_BINARY)
 
+plt.title('Prewitt_diagonal')
 plt.imshow(img_thresholded_2, cmap='gray')
 plt.axis('off')
 plt.savefig("../result/M/Prewitt_diagonal.jpg", bbox_inches='tight', pad_inches=0)

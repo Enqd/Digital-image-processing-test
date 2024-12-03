@@ -41,5 +41,5 @@ plt.subplot(1, 3, 1), plt.imshow(img, cmap='gray'), plt.title('Original Image'),
 plt.subplot(1, 3, 2), plt.imshow(laplacian_space, cmap='gray'), plt.title('Laplacian (Spatial Domain)'), plt.axis('off')
 plt.subplot(1, 3, 3), plt.imshow(img_back_freq, cmap='gray'), plt.title('Laplacian (Frequency Domain)'), plt.axis('off')
 
-plt.savefig('../result/I/result.jpg')
+plt.savefig('../result/I/result.jpg', bbox_inches='tight', pad_inches=0)
 plt.show()
